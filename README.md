@@ -1,20 +1,69 @@
-========================  
-BUILD OUTPUT DESCRIPTION  
-========================  
+# SnakeGame
 
-When building a Java application project with a main class, the IDE automatically copies all JAR files from the project's classpath to the `dist/lib` folder. Additionally, the IDE includes each JAR file in the `Class-Path` element of the application's JAR file manifest (`MANIFEST.MF`).
+A classic Snake game built in Java. The player controls a snake that grows in length as it consumes food, but must avoid colliding with the walls or itself.
 
-To run the project from the command line, navigate to the `dist` folder and execute the following command:
+## Table of Contents
+- [Installation](#installation)
+- [How to Play](#how-to-play)
+- [Project Structure](#project-structure)
+- [Build and Run](#build-and-run)
+- [Contributing](#contributing)
+- [License](#license)
 
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/SnakeGame.git
+   ```
+2. Open the project in [NetBeans IDE](https://netbeans.apache.org/).
+3. Build and run the project using the IDE or command line.
+
+## How to Play
+
+- Use the arrow keys to control the snake's direction.
+- The snake grows longer each time it eats the food.
+- Avoid hitting the walls or the snake's own body.
+- Try to score as high as possible!
+
+## Project Structure
+
+```bash
+SnakeGame/
+│
+├── src/
+│   └── snakegame/
+│       ├── SnakeGame.java    # Main class
+│       └── Board.java        # Game logic and rendering
+│
+├── dist/
+│   └── SnakeGame.jar         # Compiled JAR for distribution
+│
+└── README.md                 # Project documentation
 ```
-java -jar "SnakeGame.jar"
-```
 
-For distribution, compress the `dist` folder (including the `lib` folder) into a ZIP file.
+## Build and Run
 
-**Notes:**
+1. From the command line, navigate to the `dist` folder:
+   ```bash
+   cd dist
+   ```
+2. Run the game using the following command:
+   ```bash
+   java -jar "SnakeGame.jar"
+   ```
 
-- If two JAR files on the project classpath share the same name, only the first JAR file will be copied to the `lib` folder.
-- Only JAR files are copied to the `lib` folder. Other file types or folders on the classpath will not be included.
-- If a library on the classpath has a `Class-Path` element specified in its manifest, its content must be available on the project's runtime path.
-- To set the main class in a standard Java project, right-click the project node in the Projects window, select **Properties**, click **Run**, and specify the main class name. Alternatively, you can manually add the main class name to the `Main-Class` element in the manifest.
+Alternatively, you can build and run the project directly in the NetBeans IDE.
+
+## Contributing
+
+Contributions are welcome! Please follow these steps:
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature-branch`).
+3. Commit your changes (`git commit -m 'Add feature'`).
+4. Push to the branch (`git push origin feature-branch`).
+5. Create a pull request.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
